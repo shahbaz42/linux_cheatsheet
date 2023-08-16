@@ -1,0 +1,28 @@
+# ngnix cheatsheet 
+# https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+
+# adjusting firewall
+sudo ufw app list
+sudo ufw allow 'Nginx HTTP'
+sudo ufw enable
+sudo ufw status
+
+# nginx
+systemctl status nginx
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx
+
+# to enable/disable service to startup at boot
+sudo systemctl enable nginx
+sudo systemctl disable nginx
+
+# below returns current ip address
+curl -4 icanhazip.com
+
+# server locations
+/var/www/html
+
+# if unable to ssh after nginx config because of firewall not allowing ssh
+https://stackoverflow.com/questions/55022757/unable-to-reach-ec2-instance-after-setting-up-nginx
