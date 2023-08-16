@@ -1,0 +1,45 @@
+# Installation
+sudo apt update
+sudo apt install tmux
+
+# Starting New Session
+tmux
+
+# Basic Commands
+Ctrl+b, %     # Split current pane vertically
+Ctrl+b, "     # Split current pane horizontally
+
+# Navigating Panes
+Ctrl+b, arrow-key   # Switch between panes
+Ctrl+b, 0            # Switch to pane 0
+Ctrl+b, 1            # Switch to pane 1
+...
+
+# Closing Panes
+Ctrl+b, x   # Close the current pane
+
+# Creating Windows
+Ctrl+b, c   # Create a new window
+
+# Switching Windows
+Ctrl+b, n   # Switch to the next window
+Ctrl+b, p   # Switch to the previous window
+Ctrl+b, 0   # Switch to window 0
+Ctrl+b, 1   # Switch to window 1
+...
+
+# Detaching and Attaching
+Ctrl+b, d   # Detach from the session
+tmux attach # Reattach to the last session
+
+# Creating Named Sessions
+tmux new-session -s session_name   # Create a named session
+tmux attach -t session_name        # Reattach to a named session
+
+# Listing Sessions
+tmux list-sessions   # List existing sessions
+
+# Exiting
+exit                # Close each pane/window before exiting
+Ctrl+b, d           # Detach and then close the terminal
+
